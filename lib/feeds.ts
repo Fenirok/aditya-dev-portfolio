@@ -1,9 +1,8 @@
-import { cacheLife } from "next/cache";
 
 /**
  * Live content for the "Find Me Online" section.
- * Each fetcher is cached for ~1 hour, so the page stays static and fast
- * while new videos / articles / repos show up on their own.
+ * Fetched at build time and baked into the static pages, so the site stays
+ * fast; new videos / articles / repos appear on the next deploy.
  * Any failure returns [] and the UI falls back to a profile link.
  */
 
@@ -63,6 +62,9 @@ const clip = (s: string, n: number) => (s.length > n ? s.slice(0, n).replace(/\s
 
 async function get(url: string, init?: RequestInit) {
   const res = await fetch(url, {
+    // fetched once at build time and baked into the static pages
+    // (Cloudflare: refreshed on every deploy)
+    cache: "force-cache",
     ...init,
     headers: { "User-Agent": "Mozilla/5.0 (portfolio feed reader)", ...(init?.headers ?? {}) },
     signal: AbortSignal.timeout(8000),
@@ -74,8 +76,6 @@ async function get(url: string, init?: RequestInit) {
 // ---------- fetchers ----------
 
 export async function getYouTube(): Promise<FeedItem[]> {
-  "use cache";
-  cacheLife("hours");
   try {
     const xml = await (await get(`https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`)).text();
     return [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)]
@@ -100,8 +100,6 @@ export async function getYouTube(): Promise<FeedItem[]> {
 }
 
 export async function getMedium(): Promise<FeedItem[]> {
-  "use cache";
-  cacheLife("hours");
   try {
     const xml = await (await get(`https://medium.com/feed/@${MEDIUM_USER}`)).text();
     return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)].slice(0, 3).map(([, it]) => {
@@ -134,8 +132,6 @@ type Repo = {
 };
 
 export async function getGitHub(): Promise<FeedItem[]> {
-  "use cache";
-  cacheLife("hours");
   try {
     const repos: Repo[] = await (
       await get(`https://api.github.com/users/${GITHUB_USER}/repos?sort=pushed&per_page=30`, {
