@@ -1,26 +1,443 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Palette: Sage Green #87A96B · Walnut Brown #5A3E2B · Amber Glow #D5851F
+     (token names are historical – values are what matter) */
+  --color-dark-navy: #efe7d9; /* loader backdrop – warm linen */
+  --color-navy: #f5efe5; /* page background – cream */
+  --color-light-navy: #fbf7f0; /* cards / raised surfaces */
+  --color-lightest-navy: #e0d4c1; /* rules, borders */
+  --color-navy-shadow: rgba(90, 62, 43, 0.18);
+  --color-dark-slate: #a8957d; /* faint text */
+  --color-slate: #6e5949; /* body text */
+  --color-light-slate: #5c4838; /* secondary text */
+  --color-lightest-slate: #3a271b; /* headings – deep walnut */
+  --color-white: #fffaf2; /* text on dark walnut surfaces */
+  --color-green: #b8691a; /* accent text – Amber Glow, deepened for contrast */
+  --color-green-tint: rgba(213, 133, 31, 0.12);
+  --color-amber: #d5851f; /* Amber Glow */
+  --color-amethyst: #5a3e2b; /* Walnut Brown – dark surfaces */
+  --color-amethyst-light: #87a96b; /* Sage Green – highlights, hovers */
+
+  --font-sans: var(--font-inter), -apple-system, system-ui, sans-serif;
+  --font-mono: var(--font-fira), "SF Mono", Menlo, monospace;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+
+  --ease-portfolio: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-slate) var(--color-navy);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-navy);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 85% 0%, rgba(135, 169, 107, 0.22), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 60%, rgba(213, 133, 31, 0.1), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 100% 100%, rgba(90, 62, 43, 0.08), transparent 70%);
+  background-attachment: fixed;
+  color: var(--color-slate);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+body.blur-content #content > * {
+  filter: blur(5px) brightness(0.7);
+  transition: filter 0.25s var(--ease-portfolio);
+  pointer-events: none;
+  user-select: none;
+}
+
+::selection {
+  background-color: var(--color-amethyst);
+  color: var(--color-white);
+}
+
+:focus-visible {
+  outline: 2px dashed var(--color-green);
+  outline-offset: 3px;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+@layer components {
+  /* "About Me ———" section heading */
+  .numbered-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-family: var(--font-serif);
+    font-size: clamp(30px, 5vw, 40px);
+    font-weight: 500;
+    color: var(--color-lightest-slate);
+    white-space: nowrap;
+  }
+  .numbered-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background: linear-gradient(90deg, var(--color-amethyst-light), transparent);
+    opacity: 0.6;
+  }
+  @media (max-width: 1080px) {
+    .numbered-heading::after {
+      width: 200px;
+    }
+  }
+  @media (max-width: 600px) {
+    .numbered-heading::after {
+      width: 100%;
+    }
+  }
+
+  .btn-outline {
+    display: inline-block;
+    color: var(--color-green);
+    background-color: transparent;
+    border: 1px solid var(--color-green);
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.25s var(--ease-portfolio);
+  }
+  .btn-outline:hover,
+  .btn-outline:focus-visible {
+    outline: none;
+    box-shadow: 4px 4px 0 0 var(--color-amethyst-light);
+    transform: translate(-5px, -5px);
+  }
+
+  /* Walnut fill that surges in from the bottom-left corner on hover */
+  .btn-surge {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition:
+      color 0.45s var(--ease-portfolio),
+      border-color 0.45s var(--ease-portfolio),
+      box-shadow 0.25s var(--ease-portfolio),
+      transform 0.25s var(--ease-portfolio);
+  }
+  .btn-surge::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--color-amethyst); /* Walnut Brown */
+    clip-path: circle(0% at 0% 100%);
+    transition: clip-path 0.6s var(--ease-portfolio);
+  }
+  .btn-surge:hover,
+  .btn-surge:focus-visible {
+    color: var(--color-white);
+    border-color: var(--color-amethyst);
+  }
+  .btn-surge:hover::before,
+  .btn-surge:focus-visible::before {
+    clip-path: circle(150% at 0% 100%);
+  }
+
+  .inline-link {
+    position: relative;
+    color: var(--color-green);
+    text-decoration: none;
+  }
+  .inline-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: var(--color-green);
+    opacity: 0.5;
+    transition: width 0.25s var(--ease-portfolio);
+  }
+  .inline-link:hover::after,
+  .inline-link:focus-visible::after {
+    width: 100%;
+  }
+
+  .fancy-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  .fancy-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--color-green);
+  }
+
+  .text-glow {
+    background: linear-gradient(100deg, #5a3e2b 0%, #8a5a2e 45%, #d5851f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1),
+      transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* hero stagger */
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.5s var(--ease-portfolio) forwards;
+  }
+  .fade-down {
+    opacity: 0;
+    animation: fadeDown 0.5s var(--ease-portfolio) forwards;
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s var(--ease-portfolio) forwards;
+  }
+}
+
+/* ---------- horizontal deck (desktop) ---------- */
+/* Unlayered, so these beat the Tailwind utilities on the sections. */
+.deck-on .slide-inner section {
+  min-height: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+}
+/* Beyond slide: the recognition/certification column scrolls by itself */
+.deck-on .beyond-list {
+  max-height: calc(100vh - 190px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-amethyst-light) transparent;
+  /* soft fade at the bottom edge hints there is more below */
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 48px), transparent);
+}
+
+/* Contact slide: footer pinned to the bottom corners of the screen */
+.deck-on .site-footer {
+  position: absolute;
+  left: 120px;
+  right: 120px;
+  bottom: 24px;
+}
+
+/* shorter laptop screens: scale slide content a little so it fits */
+@media (max-height: 860px) {
+  .deck-on .slide-inner {
+    zoom: 0.9;
+    --deck-zoom: 0.9;
+  }
+}
+@media (max-height: 740px) {
+  .deck-on .slide-inner {
+    zoom: 0.8;
+    --deck-zoom: 0.8;
+  }
+}
+/* wide section: up to 1380px wide (never closer than 120px to the screen edges), even when zoomed */
+.deck-on .slide-inner .deck-bleed {
+  --bleed-w: min(100vw - 240px, 1380px);
+  margin-left: calc((100% - var(--bleed-w) / var(--deck-zoom, 1)) / 2);
+  margin-right: calc((100% - var(--bleed-w) / var(--deck-zoom, 1)) / 2);
+}
+.deck-slide::-webkit-scrollbar {
+  display: none;
+}
+@keyframes deckHint {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* ---------- /terminal ---------- */
+/* Fira Code ligatures (|_ -- => …) would mangle ASCII art */
+.term-root,
+.term-root * {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+/* the prompt shows its own caret – no focus outline */
+.term-root input:focus-visible {
+  outline: none;
+}
+.term-in {
+  animation: fadeIn 0.25s ease-out both;
+}
+.term-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #3b2b20 transparent;
+}
+.crt-glow {
+  text-shadow:
+    0 0 1px rgba(239, 230, 216, 0.35),
+    0 0 6px rgba(224, 154, 60, 0.18);
+}
+.crt-overlay {
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0px, rgba(0, 0, 0, 0.18) 1px, transparent 2px, transparent 3px),
+    radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.45) 100%);
+  animation: crtFlicker 4s steps(60) infinite;
+  mix-blend-mode: multiply;
+}
+@keyframes crtFlicker {
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Entrance animations wait until the Loader adds body.loaded */
+body:not(.loaded) .fade-up,
+body:not(.loaded) .fade-down,
+body:not(.loaded) .fade-in,
+body:not(.loaded) .roll-track {
+  animation-play-state: paused;
+}
+
+/* Hero "I can build for you / me / everyone" – vertical slot-machine roll */
+.roll-words {
+  display: inline-block;
+  height: 1.15em;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+.roll-track {
+  display: flex;
+  flex-direction: column;
+  animation: rollWords 7.5s infinite;
+}
+.roll-track > em {
+  display: block;
+  height: 1.15em;
+  line-height: 1.15em;
+  white-space: nowrap;
+}
+/* hold each word, then roll up to the next; the 4th item repeats "you" so the loop is seamless */
+@keyframes rollWords {
+  0%,
+  26% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  33%,
+  59% {
+    transform: translateY(-1.15em);
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  66%,
+  92% {
+    transform: translateY(-2.3em);
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  100% {
+    transform: translateY(-3.45em);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes drawHex {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes loaderOut {
+  0%,
+  80% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* no rolling – just show "everyone." */
+  .roll-track {
+    animation: none !important;
+    transform: translateY(-2.3em);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .fade-up,
+  .fade-down,
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }
