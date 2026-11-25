@@ -1,0 +1,1426 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 6,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "app/terminal/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "TerminalPage",
+          "startLine": 10,
+          "endLine": 27,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "metadata",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "TerminalPage",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TerminalPage",
+          "callee": "getFeeds",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Socials.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "Socials",
+          "startLine": 7,
+          "endLine": 15,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Socials",
+          "line": 7,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Socials",
+          "callee": "getFeeds",
+          "lineNumber": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/SocialsPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 232,
+      "nonEmptyLines": 214,
+      "functions": [
+        {
+          "name": "SocialsPanel",
+          "startLine": 12,
+          "endLine": 106,
+          "params": [
+            "{ socials, feeds }"
+          ]
+        },
+        {
+          "name": "allUrl",
+          "startLine": 109,
+          "endLine": 113,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "Videos",
+          "startLine": 119,
+          "endLine": 157,
+          "params": [
+            "{ items, social }"
+          ]
+        },
+        {
+          "name": "Articles",
+          "startLine": 159,
+          "endLine": 182,
+          "params": [
+            "{ items, social }"
+          ]
+        },
+        {
+          "name": "Repos",
+          "startLine": 184,
+          "endLine": 207,
+          "params": [
+            "{ items, social }"
+          ]
+        },
+        {
+          "name": "ProfileOnly",
+          "startLine": 210,
+          "endLine": 224,
+          "params": [
+            "{ social }"
+          ]
+        },
+        {
+          "name": "Empty",
+          "startLine": 226,
+          "endLine": 232,
+          "params": [
+            "{ social, what }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SocialsPanel",
+          "line": 12,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SocialsPanel",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "Math.max",
+          "lineNumber": 14
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "socials.findIndex",
+          "lineNumber": 14
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "useRef",
+          "lineNumber": 15
+        },
+        {
+          "caller": "onKey",
+          "callee": "[\"ArrowDown\", \"ArrowRight\"].includes",
+          "lineNumber": 19
+        },
+        {
+          "caller": "onKey",
+          "callee": "[\"ArrowUp\", \"ArrowLeft\"].includes",
+          "lineNumber": 19
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 21
+        },
+        {
+          "caller": "onKey",
+          "callee": "setActive",
+          "lineNumber": 23
+        },
+        {
+          "caller": "onKey",
+          "callee": "tabs.current[next]?.focus",
+          "lineNumber": 24
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "socials.map",
+          "lineNumber": 40
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "setActive",
+          "lineNumber": 53
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "[\n                  // phones/tablets: compact sideways tabs\n                  \"flex h-[44px] w-[140px] shrink-0 items-center justify-center gap-[8px] whitespace-nowrap border-b-2 px-[12px] font-mono text-[13px]\",\n                  // desktop: tall stacked tabs with large serif names\n                  \"lg:h-[72px] lg:w-full lg:justify-start lg:gap-[14px] lg:border-b-0 lg:border-l-2 lg:px-[28px] lg:font-serif lg:text-[clamp(28px,2.6vw,36px)] lg:font-medium\",\n                  \"border-lightest-navy transition-all duration-300 ease-portfolio hover:bg-light-navy hover:text-green focus-visible:bg-light-navy\",\n                  on ? \"text-green lg:pl-[36px]\" : \"text-slate lg:text-light-slate/70\",\n                ].join",
+          "lineNumber": 54
+        },
+        {
+          "caller": "SocialsPanel",
+          "callee": "allUrl",
+          "lineNumber": 98
+        },
+        {
+          "caller": "allUrl",
+          "callee": "s.url.replace",
+          "lineNumber": 110
+        },
+        {
+          "caller": "allUrl",
+          "callee": "s.url.replace",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Videos",
+          "callee": "items.map",
+          "lineNumber": 123
+        },
+        {
+          "caller": "Videos",
+          "callee": "[v.date, ...(v.meta ?? [])].filter(Boolean).join",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Videos",
+          "callee": "[v.date, ...(v.meta ?? [])].filter",
+          "lineNumber": 149
+        },
+        {
+          "caller": "Articles",
+          "callee": "items.map",
+          "lineNumber": 163
+        },
+        {
+          "caller": "Articles",
+          "callee": "a.meta.map((t) => `#${t}`).join",
+          "lineNumber": 173
+        },
+        {
+          "caller": "Articles",
+          "callee": "a.meta.map",
+          "lineNumber": 173
+        },
+        {
+          "caller": "Repos",
+          "callee": "items.map",
+          "lineNumber": 188
+        },
+        {
+          "caller": "Repos",
+          "callee": "[...(r.meta ?? []), r.date && `updated ${r.date}`].filter(Boolean).join",
+          "lineNumber": 198
+        },
+        {
+          "caller": "Repos",
+          "callee": "[...(r.meta ?? []), r.date && `updated ${r.date}`].filter",
+          "lineNumber": 198
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/terminal/Terminal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 531,
+      "nonEmptyLines": 497,
+      "functions": [
+        {
+          "name": "A",
+          "startLine": 38,
+          "endLine": 44,
+          "params": [
+            "{ href, children }"
+          ]
+        },
+        {
+          "name": "Banner",
+          "startLine": 46,
+          "endLine": 48,
+          "params": [
+            "{ name }"
+          ]
+        },
+        {
+          "name": "Prompt",
+          "startLine": 50,
+          "endLine": 58,
+          "params": [
+            "{ cmd, path }"
+          ]
+        },
+        {
+          "name": "Line",
+          "startLine": 60,
+          "endLine": 62,
+          "params": [
+            "{ children, className = \"\" }"
+          ]
+        },
+        {
+          "name": "About",
+          "startLine": 66,
+          "endLine": 95,
+          "params": []
+        },
+        {
+          "name": "Experience",
+          "startLine": 97,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "ProjectLinks",
+          "startLine": 123,
+          "endLine": 130,
+          "params": [
+            "{ p }"
+          ]
+        },
+        {
+          "name": "Work",
+          "startLine": 132,
+          "endLine": 160,
+          "params": []
+        },
+        {
+          "name": "Beyond",
+          "startLine": 162,
+          "endLine": 194,
+          "params": []
+        },
+        {
+          "name": "FeedList",
+          "startLine": 196,
+          "endLine": 213,
+          "params": [
+            "{ title, items }"
+          ]
+        },
+        {
+          "name": "Socials",
+          "startLine": 215,
+          "endLine": 239,
+          "params": [
+            "{ feeds }"
+          ]
+        },
+        {
+          "name": "Help",
+          "startLine": 241,
+          "endLine": 265,
+          "params": []
+        },
+        {
+          "name": "Terminal",
+          "startLine": 269,
+          "endLine": 531,
+          "params": [
+            "{ feeds }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Terminal",
+          "line": 269,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "About",
+          "callee": "about.paragraphs.map",
+          "lineNumber": 74
+        },
+        {
+          "caller": "About",
+          "callee": "about.skills.join",
+          "lineNumber": 86
+        },
+        {
+          "caller": "About",
+          "callee": "encodeURIComponent",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Experience",
+          "callee": "jobs.map",
+          "lineNumber": 102
+        },
+        {
+          "caller": "Experience",
+          "callee": "j.points.map",
+          "lineNumber": 109
+        },
+        {
+          "caller": "ProjectLinks",
+          "callee": "[\n    p.github && <A key=\"gh\" href={p.github}>[source]</A>,\n    p.external && <A key=\"ext\" href={p.external}>[live]</A>,\n    p.playStore && <A key=\"ps\" href={p.playStore}>[google play]</A>,\n  ].filter",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Work",
+          "callee": "featuredProjects.map",
+          "lineNumber": 137
+        },
+        {
+          "caller": "Work",
+          "callee": "\"-\".repeat",
+          "lineNumber": 140
+        },
+        {
+          "caller": "Work",
+          "callee": "\"-\".repeat",
+          "lineNumber": 140
+        },
+        {
+          "caller": "Work",
+          "callee": "p.tech.join",
+          "lineNumber": 143
+        },
+        {
+          "caller": "Work",
+          "callee": "otherProjects.map",
+          "lineNumber": 150
+        },
+        {
+          "caller": "Beyond",
+          "callee": "recognition.map",
+          "lineNumber": 170
+        },
+        {
+          "caller": "Beyond",
+          "callee": "certifications.map",
+          "lineNumber": 181
+        },
+        {
+          "caller": "FeedList",
+          "callee": "items.map",
+          "lineNumber": 202
+        },
+        {
+          "caller": "Socials",
+          "callee": "Math.max",
+          "lineNumber": 216
+        },
+        {
+          "caller": "Socials",
+          "callee": "socials.map",
+          "lineNumber": 216
+        },
+        {
+          "caller": "Socials",
+          "callee": "socials.map",
+          "lineNumber": 221
+        },
+        {
+          "caller": "Socials",
+          "callee": "s.name.padEnd",
+          "lineNumber": 223
+        },
+        {
+          "caller": "Socials",
+          "callee": "s.url.replace(/^https?:\\/\\/(www\\.)?/, \"\").replace",
+          "lineNumber": 224
+        },
+        {
+          "caller": "Socials",
+          "callee": "s.url.replace",
+          "lineNumber": 224
+        },
+        {
+          "caller": "Socials",
+          "callee": "\"Upwork\".padEnd",
+          "lineNumber": 228
+        },
+        {
+          "caller": "Help",
+          "callee": "rows.map",
+          "lineNumber": 256
+        },
+        {
+          "caller": "Help",
+          "callee": "c.padEnd",
+          "lineNumber": 258
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useRouter",
+          "lineNumber": 270
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useState",
+          "lineNumber": 271
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useState",
+          "lineNumber": 272
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useState",
+          "lineNumber": 273
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useState",
+          "lineNumber": 274
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useState",
+          "lineNumber": 275
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useRef",
+          "lineNumber": 276
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useRef",
+          "lineNumber": 277
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useRef",
+          "lineNumber": 278
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useRef",
+          "lineNumber": 279
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useRef",
+          "lineNumber": 280
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useCallback",
+          "lineNumber": 282
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setEntries",
+          "lineNumber": 282
+        },
+        {
+          "caller": "toggleCrt",
+          "callee": "setCrt",
+          "lineNumber": 284
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useEffect",
+          "lineNumber": 287
+        },
+        {
+          "caller": "Terminal",
+          "callee": "site.name.toUpperCase",
+          "lineNumber": 292
+        },
+        {
+          "caller": "Terminal",
+          "callee": "site.name.toUpperCase",
+          "lineNumber": 293
+        },
+        {
+          "caller": "Terminal",
+          "callee": "SECTIONS.join",
+          "lineNumber": 306
+        },
+        {
+          "caller": "Terminal",
+          "callee": "window.matchMedia",
+          "lineNumber": 314
+        },
+        {
+          "caller": "Terminal",
+          "callee": "boot.map",
+          "lineNumber": 316
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setTimeout",
+          "lineNumber": 316
+        },
+        {
+          "caller": "Terminal",
+          "callee": "push",
+          "lineNumber": 316
+        },
+        {
+          "caller": "Terminal",
+          "callee": "at",
+          "lineNumber": 316
+        },
+        {
+          "caller": "Terminal",
+          "callee": "timers.push",
+          "lineNumber": 317
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setTimeout",
+          "lineNumber": 317
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setBooted",
+          "lineNumber": 317
+        },
+        {
+          "caller": "Terminal",
+          "callee": "at",
+          "lineNumber": 317
+        },
+        {
+          "caller": "Terminal",
+          "callee": "timers.forEach",
+          "lineNumber": 318
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useEffect",
+          "lineNumber": 322
+        },
+        {
+          "caller": "Terminal",
+          "callee": "el.querySelector",
+          "lineNumber": 326
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useEffect",
+          "lineNumber": 330
+        },
+        {
+          "caller": "Terminal",
+          "callee": "inputRef.current?.focus",
+          "lineNumber": 331
+        },
+        {
+          "caller": "Terminal",
+          "callee": "useCallback",
+          "lineNumber": 335
+        },
+        {
+          "caller": "Terminal",
+          "callee": "raw.trim",
+          "lineNumber": 337
+        },
+        {
+          "caller": "Terminal",
+          "callee": "cmdLine.split",
+          "lineNumber": 338
+        },
+        {
+          "caller": "Terminal",
+          "callee": "(cmd0 || \"\").toLowerCase",
+          "lineNumber": 339
+        },
+        {
+          "caller": "Terminal",
+          "callee": "[cmdLine, ...history.current].slice",
+          "lineNumber": 340
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setEntries",
+          "lineNumber": 344
+        },
+        {
+          "caller": "Terminal",
+          "callee": "(args[0] || \"~\").replace(/^\\.?\\/?/, \"\").replace",
+          "lineNumber": 348
+        },
+        {
+          "caller": "Terminal",
+          "callee": "(args[0] || \"~\").replace",
+          "lineNumber": 348
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setPath",
+          "lineNumber": 350
+        },
+        {
+          "caller": "Terminal",
+          "callee": "push",
+          "lineNumber": 351
+        },
+        {
+          "caller": "Terminal",
+          "callee": "(SECTIONS as readonly string[]).includes",
+          "lineNumber": 357
+        },
+        {
+          "caller": "Terminal",
+          "callee": "push",
+          "lineNumber": 358
+        },
+        {
+          "caller": "Terminal",
+          "callee": "SECTIONS.join",
+          "lineNumber": 367
+        },
+        {
+          "caller": "Terminal",
+          "callee": "path.slice",
+          "lineNumber": 373
+        },
+        {
+          "caller": "Terminal",
+          "callee": "args.join",
+          "lineNumber": 376
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setTimeout",
+          "lineNumber": 400
+        },
+        {
+          "caller": "Terminal",
+          "callee": "router.push",
+          "lineNumber": 400
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setPath",
+          "lineNumber": 409
+        },
+        {
+          "caller": "Terminal",
+          "callee": "push",
+          "lineNumber": 410
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "run",
+          "lineNumber": 417
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "setInput",
+          "lineNumber": 418
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 420
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "Math.min",
+          "lineNumber": 421
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "setInput",
+          "lineNumber": 424
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 427
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "Math.max",
+          "lineNumber": 429
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "setInput",
+          "lineNumber": 430
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 432
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "input.trim().toLowerCase",
+          "lineNumber": 433
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "input.trim",
+          "lineNumber": 433
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "COMMANDS.filter",
+          "lineNumber": 434
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "c.startsWith",
+          "lineNumber": 434
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "setInput",
+          "lineNumber": 435
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "push",
+          "lineNumber": 436
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "hit.join",
+          "lineNumber": 436
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.key.toLowerCase",
+          "lineNumber": 437
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 438
+        },
+        {
+          "caller": "onKeyDown",
+          "callee": "setEntries",
+          "lineNumber": 439
+        },
+        {
+          "caller": "quick",
+          "callee": "run",
+          "lineNumber": 444
+        },
+        {
+          "caller": "quick",
+          "callee": "inputRef.current?.focus",
+          "lineNumber": 445
+        },
+        {
+          "caller": "Terminal",
+          "callee": "window.getSelection()?.toString",
+          "lineNumber": 482
+        },
+        {
+          "caller": "Terminal",
+          "callee": "window.getSelection",
+          "lineNumber": 482
+        },
+        {
+          "caller": "Terminal",
+          "callee": "inputRef.current?.focus",
+          "lineNumber": 482
+        },
+        {
+          "caller": "Terminal",
+          "callee": "entries.map",
+          "lineNumber": 487
+        },
+        {
+          "caller": "Terminal",
+          "callee": "setInput",
+          "lineNumber": 500
+        },
+        {
+          "caller": "Terminal",
+          "callee": "SECTIONS.map",
+          "lineNumber": 518
+        },
+        {
+          "caller": "Terminal",
+          "callee": "quick",
+          "lineNumber": 522
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 13,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "lib/feeds.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 160,
+      "nonEmptyLines": 143,
+      "functions": [
+        {
+          "name": "fmtDate",
+          "startLine": 30,
+          "endLine": 36,
+          "params": [
+            "d"
+          ]
+        },
+        {
+          "name": "decode",
+          "startLine": 38,
+          "endLine": 47,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "tag",
+          "startLine": 49,
+          "endLine": 52,
+          "params": [
+            "xml",
+            "name"
+          ]
+        },
+        {
+          "name": "stripHtml",
+          "startLine": 54,
+          "endLine": 59,
+          "params": [
+            "html"
+          ]
+        },
+        {
+          "name": "clip",
+          "startLine": 61,
+          "endLine": 61,
+          "params": [
+            "s",
+            "n"
+          ]
+        },
+        {
+          "name": "get",
+          "startLine": 63,
+          "endLine": 74,
+          "params": [
+            "url",
+            "init"
+          ]
+        },
+        {
+          "name": "getYouTube",
+          "startLine": 78,
+          "endLine": 100,
+          "params": []
+        },
+        {
+          "name": "getMedium",
+          "startLine": 102,
+          "endLine": 122,
+          "params": []
+        },
+        {
+          "name": "getGitHub",
+          "startLine": 134,
+          "endLine": 155,
+          "params": []
+        },
+        {
+          "name": "getFeeds",
+          "startLine": 157,
+          "endLine": 160,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "getYouTube",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "getMedium",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "getGitHub",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "getFeeds",
+          "line": 157,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "fmtDate",
+          "callee": "isNaN",
+          "lineNumber": 33
+        },
+        {
+          "caller": "fmtDate",
+          "callee": "t.toLocaleDateString",
+          "lineNumber": 35
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace(/&lt;/g, \"<\")\n    .replace(/&gt;/g, \">\")\n    .replace(/&quot;/g, '\"')\n    .replace(/&#39;|&#x27;|&apos;/g, \"'\")\n    .replace(/&#(\\d+);/g, (_, n) => String.fromCharCode(Number(n)))\n    .replace(/&amp;/g, \"&\")\n    .trim",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace(/&lt;/g, \"<\")\n    .replace(/&gt;/g, \">\")\n    .replace(/&quot;/g, '\"')\n    .replace(/&#39;|&#x27;|&apos;/g, \"'\")\n    .replace(/&#(\\d+);/g, (_, n) => String.fromCharCode(Number(n)))\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace(/&lt;/g, \"<\")\n    .replace(/&gt;/g, \">\")\n    .replace(/&quot;/g, '\"')\n    .replace(/&#39;|&#x27;|&apos;/g, \"'\")\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace(/&lt;/g, \"<\")\n    .replace(/&gt;/g, \">\")\n    .replace(/&quot;/g, '\"')\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace(/&lt;/g, \"<\")\n    .replace(/&gt;/g, \">\")\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace(/&lt;/g, \"<\")\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace(/<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>/g, \"$1\")\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "s\n    .replace",
+          "lineNumber": 39
+        },
+        {
+          "caller": "decode",
+          "callee": "String.fromCharCode",
+          "lineNumber": 45
+        },
+        {
+          "caller": "decode",
+          "callee": "Number",
+          "lineNumber": 45
+        },
+        {
+          "caller": "tag",
+          "callee": "xml.match",
+          "lineNumber": 50
+        },
+        {
+          "caller": "tag",
+          "callee": "decode",
+          "lineNumber": 51
+        },
+        {
+          "caller": "stripHtml",
+          "callee": "html\n    .replace(/<figure[\\s\\S]*?<\\/figure>/g, \" \")\n    .replace(/<[^>]+>/g, \" \")\n    .replace(/\\s+/g, \" \")\n    .trim",
+          "lineNumber": 55
+        },
+        {
+          "caller": "stripHtml",
+          "callee": "html\n    .replace(/<figure[\\s\\S]*?<\\/figure>/g, \" \")\n    .replace(/<[^>]+>/g, \" \")\n    .replace",
+          "lineNumber": 55
+        },
+        {
+          "caller": "stripHtml",
+          "callee": "html\n    .replace(/<figure[\\s\\S]*?<\\/figure>/g, \" \")\n    .replace",
+          "lineNumber": 55
+        },
+        {
+          "caller": "stripHtml",
+          "callee": "html\n    .replace",
+          "lineNumber": 55
+        },
+        {
+          "caller": "clip",
+          "callee": "s.slice(0, n).replace",
+          "lineNumber": 61
+        },
+        {
+          "caller": "clip",
+          "callee": "s.slice",
+          "lineNumber": 61
+        },
+        {
+          "caller": "get",
+          "callee": "fetch",
+          "lineNumber": 64
+        },
+        {
+          "caller": "get",
+          "callee": "AbortSignal.timeout",
+          "lineNumber": 70
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "(await get(`https://www.youtube.com/feeds/videos.xml?channel_id=${YOUTUBE_CHANNEL_ID}`)).text",
+          "lineNumber": 80
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "get",
+          "lineNumber": 80
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "[...xml.matchAll(/<entry>([\\s\\S]*?)<\\/entry>/g)]\n      .map(([, e]) => ({ e, url: e.match(/<link rel=\"alternate\" href=\"([^\"]+)\"/)?.[1] ?? \"\" }))\n      // long-form videos only – Shorts have /shorts/ links\n      .filter(({ url }) => url.includes(\"/watch\"))\n      .slice(0, 3)\n      .map",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "[...xml.matchAll(/<entry>([\\s\\S]*?)<\\/entry>/g)]\n      .map(([, e]) => ({ e, url: e.match(/<link rel=\"alternate\" href=\"([^\"]+)\"/)?.[1] ?? \"\" }))\n      // long-form videos only – Shorts have /shorts/ links\n      .filter(({ url }) => url.includes(\"/watch\"))\n      .slice",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "[...xml.matchAll(/<entry>([\\s\\S]*?)<\\/entry>/g)]\n      .map(([, e]) => ({ e, url: e.match(/<link rel=\"alternate\" href=\"([^\"]+)\"/)?.[1] ?? \"\" }))\n      // long-form videos only – Shorts have /shorts/ links\n      .filter",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "[...xml.matchAll(/<entry>([\\s\\S]*?)<\\/entry>/g)]\n      .map",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "xml.matchAll",
+          "lineNumber": 81
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "e.match",
+          "lineNumber": 82
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "url.includes",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "e.match",
+          "lineNumber": 87
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "tag",
+          "lineNumber": 89
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "fmtDate",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "tag",
+          "lineNumber": 91
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "e.match",
+          "lineNumber": 92
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "Number(views).toLocaleString",
+          "lineNumber": 93
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "Number",
+          "lineNumber": 93
+        },
+        {
+          "caller": "getYouTube",
+          "callee": "console.warn",
+          "lineNumber": 97
+        },
+        {
+          "caller": "getMedium",
+          "callee": "(await get(`https://medium.com/feed/@${MEDIUM_USER}`)).text",
+          "lineNumber": 104
+        },
+        {
+          "caller": "getMedium",
+          "callee": "get",
+          "lineNumber": 104
+        },
+        {
+          "caller": "getMedium",
+          "callee": "[...xml.matchAll(/<item>([\\s\\S]*?)<\\/item>/g)].slice(0, 3).map",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getMedium",
+          "callee": "[...xml.matchAll(/<item>([\\s\\S]*?)<\\/item>/g)].slice",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getMedium",
+          "callee": "xml.matchAll",
+          "lineNumber": 105
+        },
+        {
+          "caller": "getMedium",
+          "callee": "tag",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getMedium",
+          "callee": "tag",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getMedium",
+          "callee": "tag",
+          "lineNumber": 107
+        },
+        {
+          "caller": "getMedium",
+          "callee": "tag",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getMedium",
+          "callee": "link.split",
+          "lineNumber": 110
+        },
+        {
+          "caller": "getMedium",
+          "callee": "fmtDate",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getMedium",
+          "callee": "tag",
+          "lineNumber": 111
+        },
+        {
+          "caller": "getMedium",
+          "callee": "[...body.matchAll(/<img[^>]+src=\"([^\"]+)\"/g)].map((m) => m[1]).find",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getMedium",
+          "callee": "[...body.matchAll(/<img[^>]+src=\"([^\"]+)\"/g)].map",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getMedium",
+          "callee": "body.matchAll",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getMedium",
+          "callee": "src.includes",
+          "lineNumber": 113
+        },
+        {
+          "caller": "getMedium",
+          "callee": "clip",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getMedium",
+          "callee": "stripHtml",
+          "lineNumber": 114
+        },
+        {
+          "caller": "getMedium",
+          "callee": "[...it.matchAll(/<category>([\\s\\S]*?)<\\/category>/g)].slice(0, 3).map",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getMedium",
+          "callee": "[...it.matchAll(/<category>([\\s\\S]*?)<\\/category>/g)].slice",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getMedium",
+          "callee": "it.matchAll",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getMedium",
+          "callee": "decode",
+          "lineNumber": 115
+        },
+        {
+          "caller": "getMedium",
+          "callee": "console.warn",
+          "lineNumber": 119
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "(\n      await get(`https://api.github.com/users/${GITHUB_USER}/repos?sort=pushed&per_page=30`, {\n        headers: { Accept: \"application/vnd.github+json\" },\n      })\n    ).json",
+          "lineNumber": 136
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "get",
+          "lineNumber": 137
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "repos\n      .filter((r) => !r.fork)\n      .slice(0, 3)\n      .map",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "repos\n      .filter((r) => !r.fork)\n      .slice",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "repos\n      .filter",
+          "lineNumber": 141
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "fmtDate",
+          "lineNumber": 147
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "[r.language, r.stargazers_count ? `★ ${r.stargazers_count}` : null].filter",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getGitHub",
+          "callee": "console.warn",
+          "lineNumber": 152
+        },
+        {
+          "caller": "getFeeds",
+          "callee": "Promise.all",
+          "lineNumber": 158
+        },
+        {
+          "caller": "getFeeds",
+          "callee": "getYouTube",
+          "lineNumber": 158
+        },
+        {
+          "caller": "getFeeds",
+          "callee": "getMedium",
+          "lineNumber": 158
+        },
+        {
+          "caller": "getFeeds",
+          "callee": "getGitHub",
+          "lineNumber": 158
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 10,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "lib/terminal-banners.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 9,
+      "exports": [
+        {
+          "name": "banners",
+          "line": 2,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "eslint",
-  "cf:build": "opennextjs-cloudflare build",
-  "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-  "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
-},
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+  },
   "dependencies": {
+    "@next/third-parties": "^16.4.6",
     "@opennextjs/cloudflare": "^1.20.18",
     "next": "16.4.6",
     "react": "19.3.0",

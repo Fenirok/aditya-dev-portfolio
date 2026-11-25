@@ -16,6 +16,7 @@ import {
 } from "@/lib/data";
 import type { FeedItem, Feeds } from "@/lib/feeds";
 import { banners } from "@/lib/terminal-banners";
+import { track } from "@/lib/analytics";
 
 /* ---------------- look ---------------- */
 // dark walnut terminal in the site's palette
@@ -338,6 +339,7 @@ export default function Terminal({ feeds }: { feeds: Feeds }) {
       const [cmd0, ...args] = cmdLine.split(/\s+/);
       let cmd = (cmd0 || "").toLowerCase();
       if (cmdLine) history.current = [cmdLine, ...history.current].slice(0, 50);
+      if (cmdLine) track("terminal_command", { command: cmd, command_line: cmdLine.slice(0, 100) });
       histIdx.current = -1;
 
       if (cmd === "clear") {

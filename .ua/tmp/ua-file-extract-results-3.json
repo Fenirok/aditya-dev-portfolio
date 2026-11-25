@@ -1,0 +1,1020 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "app/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "Home",
+          "startLine": 14,
+          "endLine": 63,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Home",
+          "line": 14,
+          "isDefault": true
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/HorizontalDeck.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 301,
+      "nonEmptyLines": 275,
+      "functions": [
+        {
+          "name": "HorizontalDeck",
+          "startLine": 24,
+          "endLine": 286,
+          "params": [
+            "{ slides }"
+          ]
+        },
+        {
+          "name": "ScrollHint",
+          "startLine": 289,
+          "endLine": 301,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HorizontalDeck",
+          "line": 24,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useRef",
+          "lineNumber": 27
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useRef",
+          "lineNumber": 28
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useRef",
+          "lineNumber": 29
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useRef",
+          "lineNumber": 30
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useRef",
+          "lineNumber": 31
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 34
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.matchMedia",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apply",
+          "callee": "setEnabled",
+          "lineNumber": 36
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "apply",
+          "lineNumber": 37
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "mq.addEventListener",
+          "lineNumber": 38
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "mq.removeEventListener",
+          "lineNumber": 39
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 42
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "document.body.classList.toggle",
+          "lineNumber": 43
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "document.body.classList.remove",
+          "lineNumber": 44
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useCallback",
+          "lineNumber": 51
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "slide.querySelector",
+          "lineNumber": 54
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "getComputedStyle",
+          "lineNumber": 55
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useCallback",
+          "lineNumber": 60
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "Math.max",
+          "lineNumber": 62
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "Math.min",
+          "lineNumber": 62
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "opts.scrollTo.getBoundingClientRect",
+          "lineNumber": 67
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "el.getBoundingClientRect",
+          "lineNumber": 67
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "Math.max",
+          "lineNumber": 68
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "scrollerOf",
+          "lineNumber": 72
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "setIndex",
+          "lineNumber": 78
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "setTimeout",
+          "lineNumber": 81
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.dispatchEvent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 91
+        },
+        {
+          "caller": "onWheel",
+          "callee": "document.body.classList.contains",
+          "lineNumber": 96
+        },
+        {
+          "caller": "onWheel",
+          "callee": "Math.abs",
+          "lineNumber": 98
+        },
+        {
+          "caller": "onWheel",
+          "callee": "Math.abs",
+          "lineNumber": 98
+        },
+        {
+          "caller": "onWheel",
+          "callee": "Math.abs",
+          "lineNumber": 99
+        },
+        {
+          "caller": "onWheel",
+          "callee": "scrollerOf",
+          "lineNumber": 101
+        },
+        {
+          "caller": "onWheel",
+          "callee": "e.preventDefault",
+          "lineNumber": 105
+        },
+        {
+          "caller": "onWheel",
+          "callee": "bumpGesture",
+          "lineNumber": 106
+        },
+        {
+          "caller": "onWheel",
+          "callee": "Math.abs",
+          "lineNumber": 111
+        },
+        {
+          "caller": "onWheel",
+          "callee": "Math.abs",
+          "lineNumber": 111
+        },
+        {
+          "caller": "onWheel",
+          "callee": "scroller.contains",
+          "lineNumber": 117
+        },
+        {
+          "caller": "onWheel",
+          "callee": "e.preventDefault",
+          "lineNumber": 118
+        },
+        {
+          "caller": "onWheel",
+          "callee": "bumpGesture",
+          "lineNumber": 124
+        },
+        {
+          "caller": "onWheel",
+          "callee": "e.preventDefault",
+          "lineNumber": 129
+        },
+        {
+          "caller": "onWheel",
+          "callee": "bumpGesture",
+          "lineNumber": 131
+        },
+        {
+          "caller": "onWheel",
+          "callee": "go",
+          "lineNumber": 134
+        },
+        {
+          "caller": "onWheel",
+          "callee": "bumpGesture",
+          "lineNumber": 135
+        },
+        {
+          "caller": "bumpGesture",
+          "callee": "clearTimeout",
+          "lineNumber": 141
+        },
+        {
+          "caller": "bumpGesture",
+          "callee": "setTimeout",
+          "lineNumber": 142
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.addEventListener",
+          "lineNumber": 145
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.removeEventListener",
+          "lineNumber": 146
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 150
+        },
+        {
+          "caller": "onKey",
+          "callee": "t.closest",
+          "lineNumber": 154
+        },
+        {
+          "caller": "onKey",
+          "callee": "scrollerOf",
+          "lineNumber": 156
+        },
+        {
+          "caller": "onKey",
+          "callee": "[\"ArrowDown\", \"PageDown\", \" \"].includes",
+          "lineNumber": 160
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 161
+        },
+        {
+          "caller": "onKey",
+          "callee": "scroller.scrollBy",
+          "lineNumber": 162
+        },
+        {
+          "caller": "onKey",
+          "callee": "[\"ArrowUp\", \"PageUp\"].includes",
+          "lineNumber": 165
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 166
+        },
+        {
+          "caller": "onKey",
+          "callee": "scroller.scrollBy",
+          "lineNumber": 167
+        },
+        {
+          "caller": "onKey",
+          "callee": "go",
+          "lineNumber": 173
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 173
+        },
+        {
+          "caller": "onKey",
+          "callee": "go",
+          "lineNumber": 174
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 174
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 176
+        },
+        {
+          "caller": "onKey",
+          "callee": "go",
+          "lineNumber": 177
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.addEventListener",
+          "lineNumber": 179
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.removeEventListener",
+          "lineNumber": 180
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 184
+        },
+        {
+          "caller": "end",
+          "callee": "scrollerOf",
+          "lineNumber": 194
+        },
+        {
+          "caller": "end",
+          "callee": "Math.abs",
+          "lineNumber": 195
+        },
+        {
+          "caller": "end",
+          "callee": "Math.abs",
+          "lineNumber": 195
+        },
+        {
+          "caller": "end",
+          "callee": "Math.abs",
+          "lineNumber": 195
+        },
+        {
+          "caller": "end",
+          "callee": "go",
+          "lineNumber": 195
+        },
+        {
+          "caller": "end",
+          "callee": "Math.abs",
+          "lineNumber": 196
+        },
+        {
+          "caller": "end",
+          "callee": "go",
+          "lineNumber": 199
+        },
+        {
+          "caller": "end",
+          "callee": "go",
+          "lineNumber": 200
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.addEventListener",
+          "lineNumber": 203
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.addEventListener",
+          "lineNumber": 204
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.removeEventListener",
+          "lineNumber": 206
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.removeEventListener",
+          "lineNumber": 207
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 212
+        },
+        {
+          "caller": "slideOf",
+          "callee": "slideRefs.current.findIndex",
+          "lineNumber": 214
+        },
+        {
+          "caller": "slideOf",
+          "callee": "s.contains",
+          "lineNumber": 214
+        },
+        {
+          "caller": "onClick",
+          "callee": "(e.target as HTMLElement).closest",
+          "lineNumber": 217
+        },
+        {
+          "caller": "onClick",
+          "callee": "a.getAttribute(\"href\")!.slice",
+          "lineNumber": 219
+        },
+        {
+          "caller": "onClick",
+          "callee": "a.getAttribute",
+          "lineNumber": 219
+        },
+        {
+          "caller": "onClick",
+          "callee": "e.preventDefault",
+          "lineNumber": 220
+        },
+        {
+          "caller": "onClick",
+          "callee": "go",
+          "lineNumber": 220
+        },
+        {
+          "caller": "onClick",
+          "callee": "document.getElementById",
+          "lineNumber": 221
+        },
+        {
+          "caller": "onClick",
+          "callee": "slideOf",
+          "lineNumber": 222
+        },
+        {
+          "caller": "onClick",
+          "callee": "e.preventDefault",
+          "lineNumber": 224
+        },
+        {
+          "caller": "onClick",
+          "callee": "go",
+          "lineNumber": 225
+        },
+        {
+          "caller": "onFocus",
+          "callee": "slideOf",
+          "lineNumber": 228
+        },
+        {
+          "caller": "onFocus",
+          "callee": "go",
+          "lineNumber": 229
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "document.addEventListener",
+          "lineNumber": 232
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "document.addEventListener",
+          "lineNumber": 233
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "document.removeEventListener",
+          "lineNumber": 235
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "document.removeEventListener",
+          "lineNumber": 236
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "useEffect",
+          "lineNumber": 243
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "history.replaceState",
+          "lineNumber": 245
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "window.scrollTo",
+          "lineNumber": 246
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "slides.map",
+          "lineNumber": 254
+        },
+        {
+          "caller": "HorizontalDeck",
+          "callee": "slides.map",
+          "lineNumber": 267
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Jobs.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "Jobs",
+          "startLine": 10,
+          "endLine": 116,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Jobs",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Jobs",
+          "callee": "useState",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Jobs",
+          "callee": "useRef",
+          "lineNumber": 12
+        },
+        {
+          "caller": "onKey",
+          "callee": "e.preventDefault",
+          "lineNumber": 17
+        },
+        {
+          "caller": "onKey",
+          "callee": "setActive",
+          "lineNumber": 19
+        },
+        {
+          "caller": "onKey",
+          "callee": "tabs.current[next]?.focus",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Jobs",
+          "callee": "jobs.map",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Jobs",
+          "callee": "setActive",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Jobs",
+          "callee": "[\n                    // phones/tablets: compact sideways tabs\n                    \"flex h-[44px] w-[150px] shrink-0 items-center justify-center whitespace-nowrap border-b-2 px-[12px] font-mono text-[13px]\",\n                    // desktop: tall stacked tabs with large serif names\n                    \"lg:h-[72px] lg:w-full lg:justify-start lg:border-b-0 lg:border-l-2 lg:px-[28px] lg:font-serif lg:text-[clamp(28px,2.6vw,36px)] lg:font-medium\",\n                    \"border-lightest-navy transition-all duration-300 ease-portfolio hover:bg-light-navy hover:text-green focus-visible:bg-light-navy\",\n                    on ? \"text-green lg:pl-[36px]\" : \"text-slate lg:text-light-slate/70\",\n                  ].join",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Jobs",
+          "callee": "jobs.map",
+          "lineNumber": 80
+        },
+        {
+          "caller": "Jobs",
+          "callee": "job.points.map",
+          "lineNumber": 106
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Loader.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 105,
+      "nonEmptyLines": 95,
+      "functions": [
+        {
+          "name": "Loader",
+          "startLine": 18,
+          "endLine": 105,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Loader",
+          "line": 18,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Loader",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Loader",
+          "callee": "useEffect",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Loader",
+          "callee": "window.matchMedia",
+          "lineNumber": 23
+        },
+        {
+          "caller": "finish",
+          "callee": "document.body.classList.add",
+          "lineNumber": 26
+        },
+        {
+          "caller": "finish",
+          "callee": "setDone",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Loader",
+          "callee": "finish",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Loader",
+          "callee": "setTimeout",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Loader",
+          "callee": "finish",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Loader",
+          "callee": "clearTimeout",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Nav.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 179,
+      "nonEmptyLines": 168,
+      "functions": [
+        {
+          "name": "Nav",
+          "startLine": 7,
+          "endLine": 179,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Nav",
+          "line": 7,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Nav",
+          "callee": "useState",
+          "lineNumber": 8
+        },
+        {
+          "caller": "Nav",
+          "callee": "useState",
+          "lineNumber": 9
+        },
+        {
+          "caller": "Nav",
+          "callee": "useState",
+          "lineNumber": 10
+        },
+        {
+          "caller": "Nav",
+          "callee": "useState",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Nav",
+          "callee": "useEffect",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Nav",
+          "callee": "navLinks.map",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Nav",
+          "callee": "l.url.slice",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Nav",
+          "callee": "ids.map((id) => document.getElementById(id)).filter",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Nav",
+          "callee": "ids.map",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Nav",
+          "callee": "document.getElementById",
+          "lineNumber": 16
+        },
+        {
+          "caller": "deckOn",
+          "callee": "document.body.classList.contains",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Nav",
+          "callee": "deckOn",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Nav",
+          "callee": "entries.forEach",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Nav",
+          "callee": "setCurrent",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Nav",
+          "callee": "els.forEach",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Nav",
+          "callee": "io.observe",
+          "lineNumber": 27
+        },
+        {
+          "caller": "onTop",
+          "callee": "deckOn",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onTop",
+          "callee": "setCurrent",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onDeck",
+          "callee": "setCurrent",
+          "lineNumber": 32
+        },
+        {
+          "caller": "onDeck",
+          "callee": "setScrolledToTop",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.addEventListener",
+          "lineNumber": 35
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.addEventListener",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Nav",
+          "callee": "io.disconnect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.removeEventListener",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.removeEventListener",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Nav",
+          "callee": "useEffect",
+          "lineNumber": 44
+        },
+        {
+          "caller": "onScroll",
+          "callee": "setScrolledToTop",
+          "lineNumber": 48
+        },
+        {
+          "caller": "onScroll",
+          "callee": "Math.abs",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onScroll",
+          "callee": "setHidden",
+          "lineNumber": 50
+        },
+        {
+          "caller": "Nav",
+          "callee": "onScroll",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.addEventListener",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.removeEventListener",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Nav",
+          "callee": "useEffect",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Nav",
+          "callee": "document.body.classList.toggle",
+          "lineNumber": 60
+        },
+        {
+          "caller": "onKey",
+          "callee": "setMenuOpen",
+          "lineNumber": 62
+        },
+        {
+          "caller": "onResize",
+          "callee": "setMenuOpen",
+          "lineNumber": 63
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.addEventListener",
+          "lineNumber": 64
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.addEventListener",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.removeEventListener",
+          "lineNumber": 67
+        },
+        {
+          "caller": "Nav",
+          "callee": "window.removeEventListener",
+          "lineNumber": 68
+        },
+        {
+          "caller": "Nav",
+          "callee": "[\n        \"fixed top-0 z-[11] flex w-full items-center justify-between px-[25px] md:px-[40px] lg:px-[50px]\",\n        \"bg-navy/85 backdrop-blur-md transition-all duration-300 ease-portfolio\",\n        compact ? \"h-[70px] shadow-[0_10px_30px_-10px_var(--color-navy-shadow)]\" : \"h-[100px]\",\n        hidden && !menuOpen ? \"-translate-y-full\" : \"translate-y-0\",\n      ].join",
+          "lineNumber": 76
+        },
+        {
+          "caller": "Nav",
+          "callee": "navLinks.map",
+          "lineNumber": 103
+        },
+        {
+          "caller": "Nav",
+          "callee": "l.url.slice",
+          "lineNumber": 111
+        },
+        {
+          "caller": "Nav",
+          "callee": "l.url.slice",
+          "lineNumber": 113
+        },
+        {
+          "caller": "Nav",
+          "callee": "setMenuOpen",
+          "lineNumber": 128
+        },
+        {
+          "caller": "Nav",
+          "callee": "navLinks.map",
+          "lineNumber": 161
+        },
+        {
+          "caller": "Nav",
+          "callee": "setMenuOpen",
+          "lineNumber": 165
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

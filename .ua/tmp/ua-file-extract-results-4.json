@@ -1,0 +1,205 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 3,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "components/Hero.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "Hero",
+          "startLine": 5,
+          "endLine": 55,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Hero",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Hero",
+          "callee": "[\"you\", \"me\", \"everyone\", \"you\"].map",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Hero",
+          "callee": "items.map",
+          "lineNumber": 44
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/WorkCard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 134,
+      "nonEmptyLines": 124,
+      "functions": [
+        {
+          "name": "WorkCard",
+          "startLine": 8,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "Stack",
+          "startLine": 71,
+          "endLine": 103,
+          "params": [
+            "{ active, onPick }"
+          ]
+        },
+        {
+          "name": "Wireframe",
+          "startLine": 106,
+          "endLine": 134,
+          "params": [
+            "{ kind, on }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "WorkCard",
+          "line": 8,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WorkCard",
+          "callee": "useState",
+          "lineNumber": 9
+        },
+        {
+          "caller": "WorkCard",
+          "callee": "layers.map",
+          "lineNumber": 21
+        },
+        {
+          "caller": "WorkCard",
+          "callee": "setActive",
+          "lineNumber": 26
+        },
+        {
+          "caller": "WorkCard",
+          "callee": "layer.tags.map",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Stack",
+          "callee": "layers.map",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Stack",
+          "callee": "onPick",
+          "lineNumber": 83
+        },
+        {
+          "caller": "Stack",
+          "callee": "[\n                \"absolute left-0 top-0 h-[118px] w-[190px] cursor-pointer rounded-[14px] border p-[12px]\",\n                \"transition-[transform,background-color,border-color,box-shadow] duration-500 ease-portfolio\",\n                on\n                  ? \"border-amethyst/70 bg-[#dfe7c8] shadow-[0_18px_30px_-8px_rgba(90,62,43,0.45)]\"\n                  : \"border-[#d4c6b0] bg-light-navy shadow-[0_12px_20px_-10px_rgba(90,62,43,0.35)] hover:border-amethyst-light\",\n              ].join",
+          "lineNumber": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "lib/data.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 309,
+      "nonEmptyLines": 294,
+      "exports": [
+        {
+          "name": "site",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "socials",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "navLinks",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "about",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "jobs",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "featuredProjects",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "otherProjects",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "layers",
+          "line": 228,
+          "isDefault": false
+        },
+        {
+          "name": "recognition",
+          "line": 258,
+          "isDefault": false
+        },
+        {
+          "name": "certifications",
+          "line": 277,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

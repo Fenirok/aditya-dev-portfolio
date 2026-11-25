@@ -1,0 +1,538 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 8,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 8,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "components/About.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "About",
+          "startLine": 5,
+          "endLine": 61,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "About",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "About",
+          "callee": "about.paragraphs.map",
+          "lineNumber": 19
+        },
+        {
+          "caller": "About",
+          "callee": "about.skills.map",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Beyond.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 70,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "Rows",
+          "startLine": 5,
+          "endLine": 45,
+          "params": [
+            "{ label, rows }"
+          ]
+        },
+        {
+          "name": "Beyond",
+          "startLine": 47,
+          "endLine": 70,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Beyond",
+          "line": 47,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Rows",
+          "callee": "rows.map",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Contact.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 61,
+      "functions": [
+        {
+          "name": "Contact",
+          "startLine": 5,
+          "endLine": 46,
+          "params": []
+        },
+        {
+          "name": "Footer",
+          "startLine": 48,
+          "endLine": 64,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Contact",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "Footer",
+          "line": 48,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Contact",
+          "callee": "encodeURIComponent",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Footer",
+          "callee": "socials.map",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Featured.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 139,
+      "nonEmptyLines": 134,
+      "functions": [
+        {
+          "name": "Featured",
+          "startLine": 5,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "ProjectArt",
+          "startLine": 117,
+          "endLine": 139,
+          "params": [
+            "{ title, tech, alignRight }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Featured",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Featured",
+          "callee": "featuredProjects.map",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Featured",
+          "callee": "[\n                  \"relative z-[5] col-span-full row-start-1 h-full rounded p-[40px_25px_30px] md:p-0\",\n                  \"bg-light-navy/90 md:bg-transparent\",\n                  even\n                    ? \"md:col-start-1 md:col-end-8 md:text-left\"\n                    : \"md:col-start-7 md:col-end-13 md:text-right\",\n                  \"flex flex-col justify-center md:block\",\n                ].join",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Featured",
+          "callee": "p.tech.map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Featured",
+          "callee": "[\n                  \"relative z-[1] col-span-full row-start-1 h-full opacity-25 md:opacity-100\",\n                  even ? \"md:col-start-6 md:col-end-13\" : \"md:col-start-1 md:col-end-8\",\n                ].join",
+          "lineNumber": 84
+        },
+        {
+          "caller": "ProjectArt",
+          "callee": "tech.slice(0, 3).join",
+          "lineNumber": 135
+        },
+        {
+          "caller": "ProjectArt",
+          "callee": "tech.slice",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Icons.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 125,
+      "nonEmptyLines": 113,
+      "functions": [
+        {
+          "name": "GitHubIcon",
+          "startLine": 12,
+          "endLine": 16,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "LinkedInIcon",
+          "startLine": 18,
+          "endLine": 24,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "ExternalIcon",
+          "startLine": 26,
+          "endLine": 32,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "PlayStoreIcon",
+          "startLine": 35,
+          "endLine": 41,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "FolderIcon",
+          "startLine": 43,
+          "endLine": 47,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "MediumIcon",
+          "startLine": 49,
+          "endLine": 55,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "YouTubeIcon",
+          "startLine": 57,
+          "endLine": 62,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "XIcon",
+          "startLine": 64,
+          "endLine": 68,
+          "params": [
+            "{ className }"
+          ]
+        },
+        {
+          "name": "SocialIcon",
+          "startLine": 70,
+          "endLine": 83,
+          "params": [
+            "{ name, className }"
+          ]
+        },
+        {
+          "name": "Logo",
+          "startLine": 86,
+          "endLine": 118,
+          "params": [
+            "{ className, animate = false }"
+          ]
+        },
+        {
+          "name": "ArrowUpRight",
+          "startLine": 120,
+          "endLine": 125,
+          "params": [
+            "{ className }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GitHubIcon",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "LinkedInIcon",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "ExternalIcon",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "PlayStoreIcon",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "FolderIcon",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "MediumIcon",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "YouTubeIcon",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "XIcon",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "SocialIcon",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "Logo",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "ArrowUpRight",
+          "line": 120,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 11,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Projects.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 83,
+      "functions": [
+        {
+          "name": "Projects",
+          "startLine": 10,
+          "endLine": 89,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Projects",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Projects",
+          "callee": "useState",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Projects",
+          "callee": "otherProjects.slice",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Projects",
+          "callee": "socials.find",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Projects",
+          "callee": "shown.map",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Projects",
+          "callee": "p.tech.map",
+          "lineNumber": 71
+        },
+        {
+          "caller": "Projects",
+          "callee": "setShowMore",
+          "lineNumber": 83
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Reveal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "Reveal",
+          "startLine": 6,
+          "endLine": 42,
+          "params": [
+            "{\n  as: Tag = \"div\",\n  children,\n  className = \"\",\n  delay = 0,\n  id,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Reveal",
+          "line": 6,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Reveal",
+          "callee": "useRef",
+          "lineNumber": 19
+        },
+        {
+          "caller": "Reveal",
+          "callee": "useEffect",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Reveal",
+          "callee": "el.classList.add",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Reveal",
+          "callee": "io.disconnect",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Reveal",
+          "callee": "io.observe",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Reveal",
+          "callee": "io.disconnect",
+          "lineNumber": 34
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "components/Side.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 25,
+      "functions": [
+        {
+          "name": "SocialSide",
+          "startLine": 7,
+          "endLine": 27,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "SocialSide",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SocialSide",
+          "callee": "socials.map",
+          "lineNumber": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

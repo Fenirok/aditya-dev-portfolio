@@ -1,0 +1,108 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 33,
+    "filesWithImports": 16,
+    "totalEdges": 48
+  },
+  "failures": [],
+  "importMap": {
+    ".ua/config.json": [],
+    "AGENTS.md": [],
+    "README.md": [],
+    "app/globals.css": [],
+    "app/layout.tsx": [
+      "app/globals.css"
+    ],
+    "app/page.tsx": [
+      "components/About.tsx",
+      "components/Beyond.tsx",
+      "components/Contact.tsx",
+      "components/Featured.tsx",
+      "components/Hero.tsx",
+      "components/HorizontalDeck.tsx",
+      "components/Jobs.tsx",
+      "components/Loader.tsx",
+      "components/Nav.tsx",
+      "components/Projects.tsx",
+      "components/Side.tsx",
+      "components/Socials.tsx"
+    ],
+    "app/terminal/page.tsx": [
+      "components/terminal/Terminal.tsx",
+      "lib/feeds.ts"
+    ],
+    "components/About.tsx": [
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Beyond.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Contact.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Featured.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Hero.tsx": [
+      "components/WorkCard.tsx",
+      "lib/data.ts"
+    ],
+    "components/HorizontalDeck.tsx": [],
+    "components/Icons.tsx": [],
+    "components/Jobs.tsx": [
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Loader.tsx": [],
+    "components/Nav.tsx": [
+      "lib/data.ts"
+    ],
+    "components/Projects.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Reveal.tsx": [],
+    "components/Side.tsx": [
+      "components/Icons.tsx",
+      "lib/data.ts"
+    ],
+    "components/Socials.tsx": [
+      "components/Reveal.tsx",
+      "components/SocialsPanel.tsx",
+      "lib/data.ts",
+      "lib/feeds.ts"
+    ],
+    "components/SocialsPanel.tsx": [
+      "components/Icons.tsx",
+      "lib/data.ts",
+      "lib/feeds.ts"
+    ],
+    "components/WorkCard.tsx": [
+      "components/Icons.tsx",
+      "lib/data.ts"
+    ],
+    "components/terminal/Terminal.tsx": [
+      "lib/data.ts",
+      "lib/feeds.ts",
+      "lib/terminal-banners.ts"
+    ],
+    "eslint.config.mjs": [],
+    "lib/data.ts": [],
+    "lib/feeds.ts": [],
+    "lib/terminal-banners.ts": [],
+    "next.config.ts": [],
+    "open-next.config.ts": [],
+    "package.json": [],
+    "tsconfig.json": [],
+    "wrangler.jsonc": []
+  }
+}

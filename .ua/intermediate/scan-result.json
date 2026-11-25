@@ -1,0 +1,314 @@
+{
+  "name": "aditya-dev-portfolio",
+  "description": "A personal developer portfolio site built with the Next.js App Router, React, and Tailwind CSS, featuring an interactive terminal page and deployed to Cloudflare Workers via OpenNext.",
+  "languages": [
+    "css",
+    "javascript",
+    "json",
+    "jsonc",
+    "markdown",
+    "typescript"
+  ],
+  "frameworks": [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "OpenNext (Cloudflare)",
+    "Wrangler"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 9,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "app/globals.css",
+      "language": "css",
+      "sizeLines": 443,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "app/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/page.tsx",
+      "language": "typescript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/terminal/page.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/About.tsx",
+      "language": "typescript",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Beyond.tsx",
+      "language": "typescript",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Contact.tsx",
+      "language": "typescript",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Featured.tsx",
+      "language": "typescript",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Hero.tsx",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/HorizontalDeck.tsx",
+      "language": "typescript",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Icons.tsx",
+      "language": "typescript",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Jobs.tsx",
+      "language": "typescript",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Loader.tsx",
+      "language": "typescript",
+      "sizeLines": 105,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Nav.tsx",
+      "language": "typescript",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Projects.tsx",
+      "language": "typescript",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Reveal.tsx",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Side.tsx",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/Socials.tsx",
+      "language": "typescript",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/SocialsPanel.tsx",
+      "language": "typescript",
+      "sizeLines": 232,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/WorkCard.tsx",
+      "language": "typescript",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "components/terminal/Terminal.tsx",
+      "language": "typescript",
+      "sizeLines": 531,
+      "fileCategory": "code"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "sizeLines": 21,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/data.ts",
+      "language": "typescript",
+      "sizeLines": 309,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/feeds.ts",
+      "language": "typescript",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/terminal-banners.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "next.config.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "open-next.config.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "sizeLines": 34,
+      "fileCategory": "config"
+    },
+    {
+      "path": "wrangler.jsonc",
+      "language": "jsonc",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    }
+  ],
+  "totalFiles": 32,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "moderate",
+  "importMap": {
+    "AGENTS.md": [],
+    "README.md": [],
+    "app/globals.css": [],
+    "app/layout.tsx": [
+      "app/globals.css"
+    ],
+    "app/page.tsx": [
+      "components/About.tsx",
+      "components/Beyond.tsx",
+      "components/Contact.tsx",
+      "components/Featured.tsx",
+      "components/Hero.tsx",
+      "components/HorizontalDeck.tsx",
+      "components/Jobs.tsx",
+      "components/Loader.tsx",
+      "components/Nav.tsx",
+      "components/Projects.tsx",
+      "components/Side.tsx",
+      "components/Socials.tsx"
+    ],
+    "app/terminal/page.tsx": [
+      "components/terminal/Terminal.tsx",
+      "lib/feeds.ts"
+    ],
+    "components/About.tsx": [
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Beyond.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Contact.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Featured.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Hero.tsx": [
+      "components/WorkCard.tsx",
+      "lib/data.ts"
+    ],
+    "components/HorizontalDeck.tsx": [],
+    "components/Icons.tsx": [],
+    "components/Jobs.tsx": [
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Loader.tsx": [],
+    "components/Nav.tsx": [
+      "lib/data.ts"
+    ],
+    "components/Projects.tsx": [
+      "components/Icons.tsx",
+      "components/Reveal.tsx",
+      "lib/data.ts"
+    ],
+    "components/Reveal.tsx": [],
+    "components/Side.tsx": [
+      "components/Icons.tsx",
+      "lib/data.ts"
+    ],
+    "components/Socials.tsx": [
+      "components/Reveal.tsx",
+      "components/SocialsPanel.tsx",
+      "lib/data.ts",
+      "lib/feeds.ts"
+    ],
+    "components/SocialsPanel.tsx": [
+      "components/Icons.tsx",
+      "lib/data.ts",
+      "lib/feeds.ts"
+    ],
+    "components/WorkCard.tsx": [
+      "components/Icons.tsx",
+      "lib/data.ts"
+    ],
+    "components/terminal/Terminal.tsx": [
+      "lib/data.ts",
+      "lib/feeds.ts",
+      "lib/terminal-banners.ts"
+    ],
+    "eslint.config.mjs": [],
+    "lib/data.ts": [],
+    "lib/feeds.ts": [],
+    "lib/terminal-banners.ts": [],
+    "next.config.ts": [],
+    "open-next.config.ts": [],
+    "package.json": [],
+    "tsconfig.json": [],
+    "wrangler.jsonc": []
+  }
+}
